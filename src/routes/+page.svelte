@@ -1,9 +1,9 @@
 <script lang="ts">
   import Title from "$lib/components/Title.svelte";
   import Link from "$lib/components/Link.svelte";
-  import type { LinkObject } from "$lib/types";
+  import type { LinkType } from "$lib/types";
 
-  let links: LinkObject[] = [
+  let links: LinkType[] = [
     { url: "https://github.com/mrdoge515", blank: true, name: "Github" },
     { url: "/projects", blank: false, name: "Projects" },
   ];
