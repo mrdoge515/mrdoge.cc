@@ -30,4 +30,10 @@
     color: #4c4f69;
     font-size: 5em;
   }
+
+  @media (prefers-color-scheme: dark) {
+    h1 {
+      color: #cad3f5;
+    }
+  }
 </style>
