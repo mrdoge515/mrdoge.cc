@@ -51,9 +51,29 @@
     background-color: #eff1f5;
   }
 
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+  }
+  div button,
+  a {
+    background-color: transparent;
+    border: none;
+    color: #5c5f77; /* Latte - Subtext1 */
+    text-decoration: none;
+  }
+
   @media (prefers-color-scheme: dark) {
     main {
       background-color: #24273a;
+    }
+    div button,
+    a {
+      color: #b5bfe2; /* Macchiato -  #b5bfe2	*/
     }
   }
 </style>
