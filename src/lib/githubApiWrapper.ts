@@ -21,6 +21,8 @@ export async function getGithubRepo(
 
     data = json;
     data.ok = true;
+    data.created_at = new Date(json.created_at);
+    data.pushed_at = new Date(json.pushed_at);
   } catch (error) {
     data.ok = false;
     console.log(error);
