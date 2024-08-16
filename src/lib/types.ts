@@ -13,3 +13,9 @@ export type GithubApiGetRepoType = {
   pushed_at: Date | null;
   ok: boolean;
 };
+
+export type RepoType = {
+  id: number;
+  fullName: string;
+  borderColor: string;
+};
