@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/material-symbols-outlined':
+        specifier: ^5.0.38
+        version: 5.0.38
       '@fontsource/montserrat':
         specifier: ^5.0.18
         version: 5.0.18
@@ -224,6 +227,9 @@ packages:
   '@eslint/object-schema@2.1.4':
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource/material-symbols-outlined@5.0.38':
+    resolution: {integrity: sha512-BuP+7PNwGMiqE3ncW4FhIx6anD6GMpQmwFwRety+51r4wJjYdkz2v/xKdT+qTlujwm2bbCpYRCNrBitUN0cr6Q==}
 
   '@fontsource/montserrat@5.0.18':
     resolution: {integrity: sha512-85JBs2rCdFK/VBdSb401e2lXk5gynVo2zi3Rh2Guem4WNtT2q52+V90o3KzjmajY3TPJvCZA/kI7R05ev7148g==}
@@ -1342,6 +1348,8 @@ snapshots:
   '@eslint/js@9.9.0': {}
 
   '@eslint/object-schema@2.1.4': {}
+
+  '@fontsource/material-symbols-outlined@5.0.38': {}
 
   '@fontsource/montserrat@5.0.18': {}
 
