@@ -1,22 +1,32 @@
 <script lang="ts">
   import Project from "$lib/components/Project.svelte";
   import type { RepoType } from "$lib/types";
+  import { onMount } from "svelte";
 
   let repos: RepoType[] = [
     { id: 1, fullName: "mrdoge515/mrdoge.cc", borderColor: "#40a02b" },
     { id: 2, fullName: "mrdoge515/dotfiles", borderColor: "#dd7878" },
   ];
 
-  let current = {} as RepoType;
+  let currentIndex: number = 0;
 
-  function previous() {
-    current = repos[current.id - 1];
-  }
-  function next() {
-    current = repos[current.id + 1];
+  function previous(): void {
+    if (currentIndex > 0) {
+      currentIndex -= 1;
+    }
   }
 
-  current = repos[0];
+  function next(): void {
+    if (currentIndex < repos.length - 1) {
+      currentIndex += 1;
+    }
+  }
+
+  $: current = repos[currentIndex];
+
+  onMount(() => {
+    currentIndex = 0;
+  });
 </script>
 
 <main>

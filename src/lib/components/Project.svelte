@@ -14,6 +14,12 @@
   onMount(async () => {
     data = await getGithubRepo(repoFullName);
   });
+
+  $: if (repoFullName) {
+    (async () => {
+      data = await getGithubRepo(repoFullName);
+    })();
+  }
 </script>
 
 <main style="--borderColor: {borderColor}">
