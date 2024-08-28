@@ -29,6 +29,11 @@
 	});
 </script>
 
+<svelte:head>
+	<title>mrdoge.cc - projects</title>
+	<meta name="description" content="mrdoge's project website" />
+</svelte:head>
+
 <main>
 	<Project repoFullName={current.fullName} borderColor={current.borderColor} />
 	<div>

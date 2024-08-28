@@ -15,6 +15,11 @@
 	}, 2700);
 </script>
 
+<svelte:head>
+	<title>mrdoge.cc</title>
+	<meta name="description" content="mrdoge's personal website" />
+</svelte:head>
+
 <main>
 	<Title text="mrdoge.cc" typewriterSpeed={300} />
 	<div style={linksStyle}>
