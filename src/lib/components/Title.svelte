@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '@fontsource/ubuntu-mono';
+	import "@fontsource/ubuntu-mono";
 
 	export let text: string;
 	export let typewriterSpeed: number;
@@ -25,7 +25,7 @@
 
 <style>
 	h1 {
-		font-family: 'Ubuntu Mono', monospace;
+		font-family: "Ubuntu Mono", monospace;
 		color: #4c4f69;
 		font-size: 5em;
 	}

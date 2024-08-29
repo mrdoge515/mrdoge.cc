@@ -1,10 +1,9 @@
 <script lang="ts">
-	import '@fontsource/material-symbols-outlined';
-	import { onMount } from 'svelte';
-	import { getGithubRepo } from '$lib/githubApiWrapper';
-	import type { GithubApiGetRepoType } from '$lib/types';
-	import { cleanDate } from '$lib/utils';
-	import Link from './Link.svelte';
+	import { onMount } from "svelte";
+	import "@fontsource/material-symbols-outlined";
+	import { cleanDate } from "$lib/utils";
+	import { getGithubRepo } from "$lib/githubApiWrapper";
+	import type { GithubApiGetRepoType } from "$lib/types";
 
 	export let borderColor: string;
 	export let repoFullName: string;
@@ -24,7 +23,11 @@
 
 <main style="--borderColor: {borderColor}">
 	<h1>
-		<a href={data.html_url} target="_blank" rel="noopener">{data.name}</a>
+		<a
+			href="{data.html_url}"
+			target="_blank"
+			rel="noopener">{data.name}</a
+		>
 	</h1>
 	<p id="dateBar">
 		<span id="createdAt"
@@ -38,7 +41,7 @@
 
 <style>
 	.material-symbols-outlined {
-		font-family: 'Material Symbols Outlined';
+		font-family: "Material Symbols Outlined";
 		font-weight: normal;
 		font-style: normal;
 		font-size: 1em;

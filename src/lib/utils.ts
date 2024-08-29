@@ -1,35 +1,35 @@
 export function cleanDate(date: Date | null): string {
 	if (!date) {
-		return '';
+		return "";
 	}
 
-	let dateString = '';
+	let dateString = "";
 
 	if (date.getHours() < 10) {
-		dateString += '0' + date.getHours();
+		dateString += "0" + date.getHours();
 	} else {
 		dateString += date.getHours();
 	}
 
 	if (date.getMinutes() < 10) {
-		dateString += ':0' + date.getMinutes();
+		dateString += ":0" + date.getMinutes();
 	} else {
-		dateString += ':' + date.getMinutes();
+		dateString += ":" + date.getMinutes();
 	}
 
 	if (date.getDate() < 10) {
-		dateString += ' | 0' + date.getDate();
+		dateString += " | 0" + date.getDate();
 	} else {
-		dateString += ' | ' + date.getDate();
+		dateString += " | " + date.getDate();
 	}
 
 	if (date.getMonth() < 10) {
-		dateString += '/0' + date.getMonth();
+		dateString += "/0" + date.getMonth();
 	} else {
-		dateString += '/' + date.getMonth();
+		dateString += "/" + date.getMonth();
 	}
 
-	dateString += '/' + date.getFullYear();
+	dateString += "/" + date.getFullYear();
 
 	return dateString;
 }

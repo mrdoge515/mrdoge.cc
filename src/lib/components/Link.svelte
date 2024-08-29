@@ -4,9 +4,13 @@
 </script>
 
 {#if blank}
-	<a href={url} target="_blank" rel="noopener"><slot /></a>
+	<a
+		href="{url}"
+		target="_blank"
+		rel="noopener"><slot /></a
+	>
 {:else}
-	<a href={url}><slot /></a>
+	<a href="{url}"><slot /></a>
 {/if}
 
 <style>

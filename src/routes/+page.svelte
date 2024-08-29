@@ -1,30 +1,39 @@
 <script lang="ts">
-	import Title from '$lib/components/Title.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import type { LinkType } from '$lib/types';
+	import Link from "$lib/components/Link.svelte";
+	import Title from "$lib/components/Title.svelte";
+	import type { LinkType } from "$lib/types";
 
 	let links: LinkType[] = [
-		{ url: 'https://github.com/mrdoge515', blank: true, name: 'Github' },
-		{ url: '/projects', blank: false, name: 'Projects' }
+		{ url: "https://github.com/mrdoge515", blank: true, name: "Github" },
+		{ url: "/projects", blank: false, name: "Projects" },
 	];
 
-	let linksStyle: string = '';
+	let linksStyle: string = "";
 
 	setTimeout(() => {
-		linksStyle = 'opacity: 1;';
+		linksStyle = "opacity: 1;";
 	}, 2700);
 </script>
 
 <svelte:head>
 	<title>mrdoge.cc</title>
-	<meta name="description" content="mrdoge's personal website" />
+	<meta
+		name="description"
+		content="mrdoge's personal website"
+	/>
 </svelte:head>
 
 <main>
-	<Title text="mrdoge.cc" typewriterSpeed={300} />
-	<div style={linksStyle}>
+	<Title
+		text="mrdoge.cc"
+		typewriterSpeed="{300}"
+	/>
+	<div style="{linksStyle}">
 		{#each links as link}
-			<Link url={link.url} blank={link.blank}>{link.name}</Link>
+			<Link
+				url="{link.url}"
+				blank="{link.blank}">{link.name}</Link
+			>
 		{/each}
 	</div>
 </main>

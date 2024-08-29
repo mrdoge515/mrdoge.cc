@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Project from '$lib/components/Project.svelte';
-	import type { RepoType } from '$lib/types';
-	import { onMount } from 'svelte';
+	import { onMount } from "svelte";
+	import Project from "$lib/components/Project.svelte";
+	import type { RepoType } from "$lib/types";
 
 	let repos: RepoType[] = [
-		{ id: 1, fullName: 'mrdoge515/mrdoge.cc', borderColor: '#40a02b' },
-		{ id: 2, fullName: 'mrdoge515/dotfiles', borderColor: '#dd7878' }
+		{ id: 1, fullName: "mrdoge515/mrdoge.cc", borderColor: "#40a02b" },
+		{ id: 2, fullName: "mrdoge515/dotfiles", borderColor: "#dd7878" },
 	];
 
 	let currentIndex: number = 0;
@@ -31,15 +31,21 @@
 
 <svelte:head>
 	<title>mrdoge.cc - projects</title>
-	<meta name="description" content="mrdoge's project website" />
+	<meta
+		name="description"
+		content="mrdoge's project website"
+	/>
 </svelte:head>
 
 <main>
-	<Project repoFullName={current.fullName} borderColor={current.borderColor} />
+	<Project
+		repoFullName="{current.fullName}"
+		borderColor="{current.borderColor}"
+	/>
 	<div>
-		<button on:click={() => previous()}>Previous</button>
+		<button on:click="{() => previous()}">Previous</button>
 		<a href="/">Main page</a>
-		<button on:click={() => next()}>Next</button>
+		<button on:click="{() => next()}">Next</button>
 	</div>
 </main>
 
